@@ -1,0 +1,68 @@
+-- roles = (user, admin, superuser)
+CREATE TABLE [dbo].[users](
+	[id] [numeric](18, 0) IDENTITY(1,1) NOT NULL,
+	[username] [varchar](50) NOT NULL,
+	[password] [varchar](50) NOT NULL,
+	[role] [varchar](50) NOT NULL,
+	[email] [varchar](50) NULL,
+ CONSTRAINT [PK_users] PRIMARY KEY CLUSTERED 
+([id] ASC)
+) ON [PRIMARY]
+GO
+
+
+-- ITEMS
+CREATE TABLE [dbo].[items](
+	[id] [numeric](18, 0) IDENTITY(1,1) NOT NULL,
+	[name] [varchar](50) NOT NULL,
+	[color] [varchar](50) NOT NULL,
+	[description] [varchar](500) NULL,
+	[max_per_pallet] [numeric](6, 0) NOT NULL,
+	[price] [numeric](6, 2) NOT NULL,
+	[user_stamp] [varchar](50) NULL,
+	[time_stamp] [datetime] NULL,
+ CONSTRAINT [PK_items] PRIMARY KEY CLUSTERED 
+ ([id] ASC) ON [PRIMARY]
+ )
+
+ -- PALLETS
+CREATE TABLE [dbo].[pallets](
+	[id] [numeric](18, 0) IDENTITY(1,1) NOT NULL,
+	[item_id] [numeric](18, 0) NOT NULL,
+	[item_name] [varchar](50) NOT NULL,
+	[item_color] [varchar](50) NOT NULL,
+	[max_per_pallet] [numeric](6, 0) NOT NULL,
+	[qty] [numeric](6, 0) NOT NULL,
+	[user_stamp] [varchar](50) NULL,
+	[time_stamp] [datetime] NULL,
+ CONSTRAINT [PK_pallets] PRIMARY KEY CLUSTERED 
+([id] ASC)
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[pallets]  WITH CHECK ADD  CONSTRAINT [FK_pallets_items] FOREIGN KEY([item_id])
+REFERENCES [dbo].[items] ([id])
+GO
+ALTER TABLE [dbo].[pallets] CHECK CONSTRAINT [FK_pallets_items]
+GO
+
+-- LOCATIONS
+CREATE TABLE [dbo].[locations](
+	[row] [numeric](3, 0) NOT NULL,
+	[x] [numeric](3, 0) NOT NULL,
+	[y] [numeric](3, 0) NOT NULL,
+	[occupied] [bit] NOT NULL DEFAULT 0,
+	[pallet_id] [numeric](18, 0) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[row] ASC,
+	[x] ASC,
+	[y] ASC
+)
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[locations]  WITH CHECK ADD  CONSTRAINT [FK_locations_pallets] FOREIGN KEY([pallet_id])
+REFERENCES [dbo].[pallets] ([id])
+GO
+ALTER TABLE [dbo].[locations] CHECK CONSTRAINT [FK_locations_pallets]
+GO

@@ -1,0 +1,12 @@
+alter table locations drop constraint fk_locations_pallets 
+go
+alter table pallets drop constraint fk_pallets_items 
+go
+drop table items 
+go
+drop table locations
+go
+drop table pallets 
+go
+drop table users
+
