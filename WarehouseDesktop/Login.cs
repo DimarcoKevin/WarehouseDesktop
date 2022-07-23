@@ -13,5 +13,12 @@ namespace WarehouseDesktop {
         public Login() {
             InitializeComponent();
         }
+
+        private void login_button_Click(object sender, EventArgs e) {
+            String username;
+            String password;
+
+            
+        }
     }
 }
