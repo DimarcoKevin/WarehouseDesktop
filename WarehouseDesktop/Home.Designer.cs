@@ -23,37 +23,59 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.pb_image = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_image)).BeginInit();
+            this.Module1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Module1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // pb_image
+            // Module1
             // 
-            this.pb_image.ErrorImage = null;
-            this.pb_image.Image = global::WarehouseDesktop.Properties.Resources.Add_item_icon_large;
-            this.pb_image.InitialImage = null;
-            this.pb_image.Location = new System.Drawing.Point(153, 84);
-            this.pb_image.Name = "pb_image";
-            this.pb_image.Size = new System.Drawing.Size(121, 136);
-            this.pb_image.TabIndex = 0;
-            this.pb_image.TabStop = false;
+            this.Module1.Controls.Add(this.pictureBox1);
+            this.Module1.Controls.Add(this.label1);
+            this.Module1.Location = new System.Drawing.Point(153, 12);
+            this.Module1.Name = "Module1";
+            this.Module1.Size = new System.Drawing.Size(132, 201);
+            this.Module1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(3, 132);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 60);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Create New Item";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::WarehouseDesktop.Properties.Resources.Add_item_icon_large;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(127, 130);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1296, 809);
-            this.Controls.Add(this.pb_image);
+            this.Controls.Add(this.Module1);
             this.Name = "Home";
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Home_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pb_image)).EndInit();
+            this.Module1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private PictureBox pb_image;
+        private Panel Module1;
+        private PictureBox pictureBox1;
+        private Label label1;
     }
 }
