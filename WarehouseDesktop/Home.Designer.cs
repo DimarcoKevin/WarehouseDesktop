@@ -32,22 +32,24 @@
             // 
             // Module1
             // 
+            this.Module1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Module1.Controls.Add(this.pictureBox1);
             this.Module1.Controls.Add(this.label1);
             this.Module1.Location = new System.Drawing.Point(153, 12);
             this.Module1.Name = "Module1";
             this.Module1.Size = new System.Drawing.Size(132, 201);
             this.Module1.TabIndex = 1;
-            this.Module1.Paint += new System.Windows.Forms.PaintEventHandler(this.Module1_Paint);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::WarehouseDesktop.Properties.Resources.Add_item_icon_large;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(127, 130);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.DoubleClick += new System.EventHandler(this.Module1_DoubleClick);
             // 
             // label1
             // 
@@ -58,6 +60,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Create New Item";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.DoubleClick += new System.EventHandler(this.Module1_DoubleClick);
             // 
             // Home
             // 

@@ -18,8 +18,8 @@ namespace WarehouseDesktop {
             // code for when homepage loads
         }
 
-        private void Module1_Paint(object sender, PaintEventArgs e) {
-            // this is where you put click code to open new module
+        private void Module1_DoubleClick(object sender, EventArgs e) {
+            MessageBox.Show("Module 1 opened!");
         }
     }
 }
