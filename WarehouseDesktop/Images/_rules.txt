@@ -1,0 +1,5 @@
+Each icon is downloaded with three sizes
+
+LARGE  - 128x128 px
+MEDIUM - 72x72 px
+SMALL  - 48x48 px
