@@ -35,7 +35,7 @@ namespace WarehouseDesktop {
             }
 
             // showing home page
-            Form home = new Form();
+            Home home = new Home();
             home.Show();
 
 
