@@ -26,14 +26,24 @@ namespace WarehouseDesktop {
 
             SqlAdapter.Fill(dt);
 
+            // checking if any rows are found
             if (dt.Rows.Count == 0) {
                 l_error.Text = "Error, cannot sign you in...";
                 t_username.Text = "";
                 t_password.Text = "";
                 return;
-            } else {
-                l_error.Text = "Works!";
             }
+
+            // showing home page
+            Form home = new Form();
+            home.Show();
+
+
+            // TODO find way to actually close original pages
+            // hiding login view
+            Hide();
+
+            
         }
     }
 }
