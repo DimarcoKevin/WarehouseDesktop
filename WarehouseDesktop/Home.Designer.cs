@@ -24,8 +24,8 @@
         /// </summary>
         private void InitializeComponent() {
             this.Module1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.Module1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -38,6 +38,16 @@
             this.Module1.Name = "Module1";
             this.Module1.Size = new System.Drawing.Size(132, 201);
             this.Module1.TabIndex = 1;
+            this.Module1.Paint += new System.Windows.Forms.PaintEventHandler(this.Module1_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::WarehouseDesktop.Properties.Resources.Add_item_icon_large;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(127, 130);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -48,15 +58,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Create New Item";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::WarehouseDesktop.Properties.Resources.Add_item_icon_large;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(127, 130);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // Home
             // 

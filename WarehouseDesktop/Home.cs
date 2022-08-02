@@ -15,7 +15,11 @@ namespace WarehouseDesktop {
         }
 
         private void Home_Load(object sender, EventArgs e) {
+            // code for when homepage loads
+        }
 
+        private void Module1_Paint(object sender, PaintEventArgs e) {
+            // this is where you put click code to open new module
         }
     }
 }
