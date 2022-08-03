@@ -18,8 +18,12 @@ namespace WarehouseDesktop {
             // code for when homepage loads
         }
 
-        private void Module1_DoubleClick(object sender, EventArgs e) {
-            MessageBox.Show("Module 1 opened!");
+        private void Items_Open(object sender, EventArgs e) {
+            MessageBox.Show("Items module opened!");
+        }
+
+        private void Pallets_Open(object sender, EventArgs e) {
+            MessageBox.Show("Pallets module opened!");
         }
     }
 }
