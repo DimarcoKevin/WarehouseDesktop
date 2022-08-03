@@ -26,8 +26,13 @@
             this.Module1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.Module1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // Module1
@@ -35,7 +40,7 @@
             this.Module1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Module1.Controls.Add(this.pictureBox1);
             this.Module1.Controls.Add(this.label1);
-            this.Module1.Location = new System.Drawing.Point(153, 12);
+            this.Module1.Location = new System.Drawing.Point(261, 12);
             this.Module1.Name = "Module1";
             this.Module1.Size = new System.Drawing.Size(132, 201);
             this.Module1.TabIndex = 1;
@@ -58,21 +63,54 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 60);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Create New Item";
+            this.label1.Text = "Items";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.DoubleClick += new System.EventHandler(this.Module1_DoubleClick);
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(426, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(132, 201);
+            this.panel1.TabIndex = 2;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::WarehouseDesktop.Properties.Resources.Package_add_icon_large;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(127, 130);
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(3, 132);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(126, 60);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Pallets";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1296, 809);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.Module1);
             this.Name = "Home";
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Home_Load);
             this.Module1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -81,5 +119,8 @@
         private Panel Module1;
         private PictureBox pictureBox1;
         private Label label1;
+        private Panel panel1;
+        private PictureBox pictureBox2;
+        private Label label2;
     }
 }
