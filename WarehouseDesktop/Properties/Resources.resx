@@ -118,13 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Add-item-icon-large" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Add-item-icon-large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Add-item-icon_medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Add-item-icon_medium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Add-item-icon-small" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Add-item-icon-small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Add-item-icon-large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Add-item-icon-large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Package-add-icon-large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Package-add-icon-large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Package-add-icon-medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Package-add-icon-medium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Package-add-icon-small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Package-add-icon-small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
