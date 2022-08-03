@@ -31,6 +31,7 @@
             this.l_pallets_title = new System.Windows.Forms.Label();
             this.dock_panel_divider = new System.Windows.Forms.Panel();
             this.user_panel_divider = new System.Windows.Forms.Panel();
+            this.l_welcome = new System.Windows.Forms.Label();
             this.ItemsModule.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_items)).BeginInit();
             this.PalletsModule.SuspendLayout();
@@ -117,11 +118,22 @@
             this.user_panel_divider.Size = new System.Drawing.Size(242, 10);
             this.user_panel_divider.TabIndex = 4;
             // 
+            // l_welcome
+            // 
+            this.l_welcome.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.l_welcome.Location = new System.Drawing.Point(12, 9);
+            this.l_welcome.Name = "l_welcome";
+            this.l_welcome.Size = new System.Drawing.Size(217, 43);
+            this.l_welcome.TabIndex = 5;
+            this.l_welcome.Text = "TEMP";
+            this.l_welcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1296, 809);
+            this.Controls.Add(this.l_welcome);
             this.Controls.Add(this.user_panel_divider);
             this.Controls.Add(this.dock_panel_divider);
             this.Controls.Add(this.PalletsModule);
@@ -146,5 +158,6 @@
         private Label l_pallets_title;
         private Panel dock_panel_divider;
         private Panel user_panel_divider;
+        private Label l_welcome;
     }
 }

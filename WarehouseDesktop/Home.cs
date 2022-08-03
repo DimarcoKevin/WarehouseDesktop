@@ -2,14 +2,21 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Warehouse.Variables;
 
 namespace WarehouseDesktop {
     public partial class Home : Form {
+        SqlConnection con = new SqlConnection(GlobalVariables.connectionString);
+
+        String user = GlobalVariables.user;
+        String role = GlobalVariables.role; 
+
         public Home() {
             InitializeComponent();
         }
@@ -22,6 +29,9 @@ namespace WarehouseDesktop {
 
             // making panel divider full height
             dock_panel_divider.Height = this.Height;
+
+            // setting welcome message
+            l_welcome.Text = "Welcome " + user + "!";
         }
 
         private void Items_Open(object sender, EventArgs e) {

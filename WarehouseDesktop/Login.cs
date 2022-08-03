@@ -26,6 +26,9 @@ namespace WarehouseDesktop {
 
             SqlAdapter.Fill(dt);
 
+            GlobalVariables.user = dt.Rows[0]["username"].ToString();
+            GlobalVariables.role = dt.Rows[0]["role"].ToString();
+
             // checking if any rows are found
             if (dt.Rows.Count == 0) {
                 l_error.Text = "Error, cannot sign you in...";
