@@ -15,7 +15,8 @@ namespace WarehouseDesktop {
         }
 
         private void Home_Load(object sender, EventArgs e) {
-            // code for when homepage loads
+            this.TopMost = true;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void Items_Open(object sender, EventArgs e) {
