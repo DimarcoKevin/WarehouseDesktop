@@ -29,7 +29,8 @@
             this.PalletsModule = new System.Windows.Forms.Panel();
             this.pb_pallets = new System.Windows.Forms.PictureBox();
             this.l_pallets_title = new System.Windows.Forms.Label();
-            this.panel_divider = new System.Windows.Forms.Panel();
+            this.dock_panel_divider = new System.Windows.Forms.Panel();
+            this.user_panel_divider = new System.Windows.Forms.Panel();
             this.ItemsModule.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_items)).BeginInit();
             this.PalletsModule.SuspendLayout();
@@ -100,20 +101,29 @@
             this.l_pallets_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.l_pallets_title.DoubleClick += new System.EventHandler(this.Pallets_Open);
             // 
-            // panel_divider
+            // dock_panel_divider
             // 
-            this.panel_divider.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel_divider.Location = new System.Drawing.Point(235, -1);
-            this.panel_divider.Name = "panel_divider";
-            this.panel_divider.Size = new System.Drawing.Size(10, 817);
-            this.panel_divider.TabIndex = 3;
+            this.dock_panel_divider.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dock_panel_divider.Location = new System.Drawing.Point(235, -1);
+            this.dock_panel_divider.Name = "dock_panel_divider";
+            this.dock_panel_divider.Size = new System.Drawing.Size(10, 817);
+            this.dock_panel_divider.TabIndex = 3;
+            // 
+            // user_panel_divider
+            // 
+            this.user_panel_divider.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.user_panel_divider.Location = new System.Drawing.Point(0, 55);
+            this.user_panel_divider.Name = "user_panel_divider";
+            this.user_panel_divider.Size = new System.Drawing.Size(242, 10);
+            this.user_panel_divider.TabIndex = 4;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1296, 809);
-            this.Controls.Add(this.panel_divider);
+            this.Controls.Add(this.user_panel_divider);
+            this.Controls.Add(this.dock_panel_divider);
             this.Controls.Add(this.PalletsModule);
             this.Controls.Add(this.ItemsModule);
             this.Name = "Home";
@@ -134,6 +144,7 @@
         private Panel PalletsModule;
         private PictureBox pb_pallets;
         private Label l_pallets_title;
-        private Panel panel_divider;
+        private Panel dock_panel_divider;
+        private Panel user_panel_divider;
     }
 }

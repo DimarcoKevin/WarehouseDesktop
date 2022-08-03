@@ -21,7 +21,7 @@ namespace WarehouseDesktop {
             this.WindowState = FormWindowState.Maximized;
 
             // making panel divider full height
-            panel_divider.Height = this.Height;
+            dock_panel_divider.Height = this.Height;
         }
 
         private void Items_Open(object sender, EventArgs e) {
