@@ -140,6 +140,7 @@
             this.Controls.Add(this.ItemsModule);
             this.Name = "Home";
             this.Text = "Home";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Home_Closing);
             this.Load += new System.EventHandler(this.Home_Load);
             this.ItemsModule.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb_items)).EndInit();

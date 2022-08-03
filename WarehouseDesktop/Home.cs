@@ -34,6 +34,14 @@ namespace WarehouseDesktop {
             l_welcome.Text = "Welcome " + user + "!";
         }
 
+        private void Home_Closing(object sender, FormClosingEventArgs e) {
+            if (MessageBox.Show("Are you sure you want to exit?", "Confirm exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
+                Application.ExitThread();
+            } else {
+                e.Cancel = true; 
+            }
+        }
+
         private void Items_Open(object sender, EventArgs e) {
             MessageBox.Show("Items module opened!");
         }
@@ -41,5 +49,7 @@ namespace WarehouseDesktop {
         private void Pallets_Open(object sender, EventArgs e) {
             MessageBox.Show("Pallets module opened!");
         }
+
+        
     }
 }
