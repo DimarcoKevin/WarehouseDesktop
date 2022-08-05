@@ -32,7 +32,6 @@
             this.dock_panel_divider = new System.Windows.Forms.Panel();
             this.user_panel_divider = new System.Windows.Forms.Panel();
             this.l_welcome = new System.Windows.Forms.Label();
-            this.templateModule2 = new WarehouseDesktop.Templates.TemplateModule();
             this.ItemsModule.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_items)).BeginInit();
             this.PalletsModule.SuspendLayout();
@@ -129,19 +128,11 @@
             this.l_welcome.Text = "TEMP";
             this.l_welcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // templateModule2
-            // 
-            this.templateModule2.Location = new System.Drawing.Point(813, 290);
-            this.templateModule2.Name = "templateModule2";
-            this.templateModule2.Size = new System.Drawing.Size(8, 8);
-            this.templateModule2.TabIndex = 7;
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1296, 809);
-            this.Controls.Add(this.templateModule2);
             this.Controls.Add(this.l_welcome);
             this.Controls.Add(this.user_panel_divider);
             this.Controls.Add(this.dock_panel_divider);
@@ -169,6 +160,5 @@
         private Panel dock_panel_divider;
         private Panel user_panel_divider;
         private Label l_welcome;
-        private Templates.TemplateModule templateModule2;
     }
 }

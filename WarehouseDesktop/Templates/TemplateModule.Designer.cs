@@ -35,7 +35,7 @@
             this.Module.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Module.Controls.Add(this.pb);
             this.Module.Controls.Add(this.l_title);
-            this.Module.Location = new System.Drawing.Point(77, 30);
+            this.Module.Location = new System.Drawing.Point(16, 14);
             this.Module.Name = "Module";
             this.Module.Size = new System.Drawing.Size(132, 201);
             this.Module.TabIndex = 2;
@@ -66,7 +66,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.Module);
             this.Name = "TemplateModule";
-            this.Size = new System.Drawing.Size(287, 260);
+            this.Size = new System.Drawing.Size(163, 230);
             this.Module.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb)).EndInit();
             this.ResumeLayout(false);
