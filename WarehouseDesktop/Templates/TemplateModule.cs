@@ -15,25 +15,24 @@ namespace WarehouseDesktop.Templates {
             InitializeComponent();
             imagePath = "Not populated";
             moduleTitle = "Not populated";
-
         }
 
         public TemplateModule(string image, string title) {
-            InitializeComponent();
-
-            string filePath = "../Images/";
+            InitializeComponent();           
             imagePath = image;
             moduleTitle = title;
-            pb.BackgroundImage = Image.FromFile(Path.Combine(filePath, imagePath));
-            l_title.Text = moduleTitle;
-
         }
 
         public string imagePath { get; set; }
         public string moduleTitle { get; set; }
 
         private void TemplateModule_Load(object sender, EventArgs e) {
+            // grabbing folder path
+            string filePath = "../Images/";
 
+            // setting image field and title field of object
+            pb.BackgroundImage = Image.FromFile(Path.Combine(filePath, imagePath));
+            l_title.Text = moduleTitle;
         }
     }
 }
