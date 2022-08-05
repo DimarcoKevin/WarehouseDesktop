@@ -57,7 +57,7 @@
             this.l_title.Name = "l_title";
             this.l_title.Size = new System.Drawing.Size(126, 60);
             this.l_title.TabIndex = 0;
-            this.l_title.Text = "Items";
+            this.l_title.Text = "TEMP";
             this.l_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TemplateModule
@@ -67,6 +67,7 @@
             this.Controls.Add(this.Module);
             this.Name = "TemplateModule";
             this.Size = new System.Drawing.Size(163, 230);
+            this.Load += new System.EventHandler(this.TemplateModule_Load);
             this.Module.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb)).EndInit();
             this.ResumeLayout(false);
