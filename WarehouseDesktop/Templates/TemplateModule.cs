@@ -13,15 +13,24 @@ namespace WarehouseDesktop.Templates {
     public partial class TemplateModule : UserControl {
         public TemplateModule() {
             InitializeComponent();
+            imagePath = "Not populated";
+            moduleTitle = "Not populated";
+
         }
 
-        public TemplateModule(String imagePath, String title) {
+        public TemplateModule(string image, string title) {
             InitializeComponent();
-            String filePath = "../Images/";
+
+            string filePath = "../Images/";
+            imagePath = image;
+            moduleTitle = title;
             pb.BackgroundImage = Image.FromFile(Path.Combine(filePath, imagePath));
-            l_title.Text = title;
+            l_title.Text = moduleTitle;
 
         }
+
+        public string imagePath { get; set; }
+        public string moduleTitle { get; set; }
 
         private void TemplateModule_Load(object sender, EventArgs e) {
 
