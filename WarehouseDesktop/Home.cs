@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Warehouse.Variables;
+using WarehouseDesktop.Templates;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace WarehouseDesktop {
     public partial class Home : Form {
@@ -19,9 +21,23 @@ namespace WarehouseDesktop {
 
         public Home() {
             InitializeComponent();
-        }
-
+}
         private void Home_Load(object sender, EventArgs e) {
+
+            SqlDataAdapter SqlAdapter = new SqlDataAdapter("select * from dbo.modules", con);
+            DataTable dt = new DataTable();
+
+            SqlAdapter.Fill(dt);
+
+            for(int i = 0; i < dt.Rows.Count; i++) {
+                string? name = dt.Rows[i]["module_name"].ToString();
+                string? image = dt.Rows[i]["module_image"].ToString();
+
+                TemplateModule module = new TemplateModule(name, image);
+                module.Top = 200 * (i+1);
+                module.Left = 200 * (i+1);
+                this.Controls.Add(module);  
+            }
 
             // Making page full screen 
             this.TopMost = true;
