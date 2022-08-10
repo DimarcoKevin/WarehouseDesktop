@@ -21,6 +21,10 @@
             // setting image field and title field of object
             pb.BackgroundImage = Image.FromFile(filePath + imagePath);
             l_title.Text = moduleTitle;
-        }      
+        }
+
+        private void ModuleClick(object sender, EventArgs e) {
+            MessageBox.Show("Module " + moduleTitle + " opened!");
+        }
     }
 }
