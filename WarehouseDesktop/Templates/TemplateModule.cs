@@ -22,9 +22,5 @@
             pb.BackgroundImage = Image.FromFile(filePath + imagePath);
             l_title.Text = moduleTitle;
         }      
-
-        private void TemplateModule_Load(object sender, EventArgs e) {
-           
-        }
     }
 }
