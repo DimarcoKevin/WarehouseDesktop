@@ -24,21 +24,6 @@ namespace WarehouseDesktop {
 }
         private void Home_Load(object sender, EventArgs e) {
 
-            SqlDataAdapter SqlAdapter = new SqlDataAdapter("select * from dbo.modules", con);
-            DataTable dt = new DataTable();
-
-            SqlAdapter.Fill(dt);
-
-            for(int i = 0; i < dt.Rows.Count; i++) {
-                string? name = dt.Rows[i]["module_name"].ToString();
-                string? image = dt.Rows[i]["module_image"].ToString();
-
-                TemplateModule module = new TemplateModule(name, image);
-                module.Top = 200 * (i+1);
-                module.Left = 200 * (i+1);
-                this.Controls.Add(module);  
-            }
-
             // Making page full screen 
             this.TopMost = true;
             this.WindowState = FormWindowState.Maximized;
@@ -48,6 +33,25 @@ namespace WarehouseDesktop {
 
             // setting welcome message
             l_welcome.Text = "Welcome " + user + "!";
+
+            // grabbing table will all module data
+            SqlDataAdapter SqlAdapter = new SqlDataAdapter("select * from dbo.modules", con);
+            DataTable dt = new DataTable();
+
+            SqlAdapter.Fill(dt);
+
+            int panel = dock_panel_divider.Right;
+
+            // dynamically adding module objects
+            for (int i = 0; i < dt.Rows.Count; i++) {
+                string? name = dt.Rows[i]["module_name"].ToString();
+                string? image = dt.Rows[i]["module_image"].ToString();
+
+                TemplateModule module = new TemplateModule(name, image);
+                this.Controls.Add(module);
+                module.Top = 50;
+                module.Left = 200 * (i+1) + panel;                
+            }  
         }
 
         private void Home_Closing(object sender, FormClosingEventArgs e) {
