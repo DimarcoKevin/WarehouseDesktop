@@ -27,6 +27,9 @@ namespace WarehouseDesktop.Templates {
             // works for now but its super hacky
             string filePath = "../../../Images/";
 
+            // changing file size 
+            imagePath = imagePath.Replace("large", "medium");
+
             // setting image field and title field of object
             pb.BackgroundImage = Image.FromFile(filePath + imagePath);
             l_title.Text = moduleTitle;
