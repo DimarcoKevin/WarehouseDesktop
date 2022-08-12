@@ -14,7 +14,6 @@
 
   <ItemGroup>
     <Folder Include="Images\" />
-    <Folder Include="Templates\" />
   </ItemGroup>
 
   <ItemGroup>

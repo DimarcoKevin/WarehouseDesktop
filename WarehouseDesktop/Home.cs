@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -34,24 +35,11 @@ namespace WarehouseDesktop {
             // setting welcome message
             l_welcome.Text = "Welcome " + user + "!";
 
-            // grabbing table will all module data
-            SqlDataAdapter SqlAdapter = new SqlDataAdapter("select * from dbo.modules", con);
-            DataTable dt = new DataTable();
+            // grabbing all module data
+            PopulateModules();
 
-            SqlAdapter.Fill(dt);
-
-            int panel = dock_panel_divider.Right;
-
-            // dynamically adding module objects
-            for (int i = 0; i < dt.Rows.Count; i++) {
-                string? name = dt.Rows[i]["module_name"].ToString();
-                string? image = dt.Rows[i]["module_image"].ToString();
-
-                TemplateModule module = new TemplateModule(name, image);
-                this.Controls.Add(module);
-                module.Top = 50;
-                module.Left = 200 * (i+1) + panel;                
-            }  
+            // grabbing user specific favourite modules
+            PopulateFavouriteModules();
         }
 
         private void Home_Closing(object sender, FormClosingEventArgs e) {
@@ -70,6 +58,45 @@ namespace WarehouseDesktop {
             MessageBox.Show("Pallets module opened!");
         }
 
-        
+        private void PopulateModules() {
+            SqlDataAdapter SqlAdapter = new SqlDataAdapter("select * from modules order by order_no asc", con);
+            DataTable dt = new DataTable();
+
+            SqlAdapter.Fill(dt);
+
+            int panel = dock_panel_divider.Right;
+
+            // dynamically adding module objects
+            for (int i = 0; i < dt.Rows.Count; i++) {
+                string? name = dt.Rows[i]["module_name"].ToString();
+                string? image = dt.Rows[i]["module_image"].ToString();
+
+                TemplateModule module = new TemplateModule(name, image);
+                this.Controls.Add(module);
+                module.Top = 50;
+                module.Left = (160 * i) + panel;
+            }
+        }
+
+        private void PopulateFavouriteModules() {
+            SqlDataAdapter SqlAdapter = new SqlDataAdapter("select m.module_name, m.module_image from favourite_modules f " +
+                                            "join modules m on f.module = m.module_name where f.username = '" + user + "' order by f.order_no asc", con);
+            DataTable dt = new DataTable();
+
+            SqlAdapter.Fill(dt);
+
+            // dynamically adding module objects
+            for (int i = 0; i < dt.Rows.Count; i++) {
+                string? name = dt.Rows[i]["module_name"].ToString();
+                string? image = dt.Rows[i]["module_image"].ToString();
+
+                TemplateFavourites module = new TemplateFavourites(name, image);
+                this.Controls.Add(module);
+                module.Left = 20;
+                module.Top = 200 * (i + 1);
+            }
+        }
+
+
     }
 }
