@@ -55,7 +55,7 @@
             this.l_title.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.l_title.Location = new System.Drawing.Point(91, 19);
             this.l_title.Name = "l_title";
-            this.l_title.Size = new System.Drawing.Size(126, 60);
+            this.l_title.Size = new System.Drawing.Size(207, 60);
             this.l_title.TabIndex = 0;
             this.l_title.Text = "TEMP";
             this.l_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
