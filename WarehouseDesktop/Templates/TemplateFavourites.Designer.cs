@@ -37,7 +37,7 @@
             this.Module.Controls.Add(this.l_title);
             this.Module.Location = new System.Drawing.Point(3, 3);
             this.Module.Name = "Module";
-            this.Module.Size = new System.Drawing.Size(310, 95);
+            this.Module.Size = new System.Drawing.Size(240, 81);
             this.Module.TabIndex = 3;
             // 
             // pb
@@ -46,7 +46,7 @@
             this.pb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pb.Location = new System.Drawing.Point(3, 3);
             this.pb.Name = "pb";
-            this.pb.Size = new System.Drawing.Size(82, 86);
+            this.pb.Size = new System.Drawing.Size(82, 73);
             this.pb.TabIndex = 1;
             this.pb.TabStop = false;
             this.pb.DoubleClick += new System.EventHandler(this.ModuleClick);
@@ -56,7 +56,7 @@
             this.l_title.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.l_title.Location = new System.Drawing.Point(91, 3);
             this.l_title.Name = "l_title";
-            this.l_title.Size = new System.Drawing.Size(207, 86);
+            this.l_title.Size = new System.Drawing.Size(143, 73);
             this.l_title.TabIndex = 0;
             this.l_title.Text = "TEMP";
             this.l_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -68,7 +68,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.Module);
             this.Name = "TemplateFavourites";
-            this.Size = new System.Drawing.Size(315, 103);
+            this.Size = new System.Drawing.Size(248, 90);
             this.Module.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb)).EndInit();
             this.ResumeLayout(false);
