@@ -85,6 +85,8 @@ namespace WarehouseDesktop {
 
             SqlAdapter.Fill(dt);
 
+            int panel = user_panel_divider.Bottom;
+
             // dynamically adding module objects
             for (int i = 0; i < dt.Rows.Count; i++) {
                 string? name = dt.Rows[i]["module_name"].ToString();
@@ -92,8 +94,8 @@ namespace WarehouseDesktop {
 
                 TemplateFavourites module = new TemplateFavourites(name, image);
                 this.Controls.Add(module);
-                module.Left = 20;
-                module.Top = 200 * (i + 1);
+                module.Left = 10;
+                module.Top = (120 * i) + panel + 10;
             }
         }
 
