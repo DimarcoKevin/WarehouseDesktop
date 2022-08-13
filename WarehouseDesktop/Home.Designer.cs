@@ -31,7 +31,7 @@
             // dock_panel_divider
             // 
             this.dock_panel_divider.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dock_panel_divider.Location = new System.Drawing.Point(235, -1);
+            this.dock_panel_divider.Location = new System.Drawing.Point(267, -1);
             this.dock_panel_divider.Name = "dock_panel_divider";
             this.dock_panel_divider.Size = new System.Drawing.Size(10, 817);
             this.dock_panel_divider.TabIndex = 3;
@@ -41,7 +41,7 @@
             this.user_panel_divider.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.user_panel_divider.Location = new System.Drawing.Point(0, 55);
             this.user_panel_divider.Name = "user_panel_divider";
-            this.user_panel_divider.Size = new System.Drawing.Size(242, 10);
+            this.user_panel_divider.Size = new System.Drawing.Size(274, 10);
             this.user_panel_divider.TabIndex = 4;
             // 
             // l_welcome
