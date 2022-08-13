@@ -49,7 +49,7 @@
             this.l_welcome.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.l_welcome.Location = new System.Drawing.Point(12, 9);
             this.l_welcome.Name = "l_welcome";
-            this.l_welcome.Size = new System.Drawing.Size(217, 43);
+            this.l_welcome.Size = new System.Drawing.Size(249, 43);
             this.l_welcome.TabIndex = 5;
             this.l_welcome.Text = "TEMP";
             this.l_welcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
