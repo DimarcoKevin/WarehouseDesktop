@@ -91,6 +91,9 @@ namespace WarehouseDesktop {
             }
         }
 
+        private void OpenModule() {
+
+        }
 
     }
 }
