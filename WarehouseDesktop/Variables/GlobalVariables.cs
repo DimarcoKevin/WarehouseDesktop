@@ -25,5 +25,7 @@ namespace Warehouse.Variables {
         public static string role { get; set; }
 
         public static readonly string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB; Initial Catalog=Warehouse; Integrated Security=true";
+
+        public static readonly string solutionPath = "../../../";
     }
 }
