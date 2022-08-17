@@ -50,14 +50,6 @@ namespace WarehouseDesktop {
             }
         }
 
-        private void Items_Open(object sender, EventArgs e) {
-            MessageBox.Show("Items module opened!");
-        }
-
-        private void Pallets_Open(object sender, EventArgs e) {
-            MessageBox.Show("Pallets module opened!");
-        }
-
         private void PopulateModules() {
             SqlDataAdapter SqlAdapter = new SqlDataAdapter("select * from modules order by order_no asc", con);
             DataTable dt = new DataTable();
