@@ -13,5 +13,11 @@ namespace WarehouseDesktop.Modules {
         public Items() {
             InitializeComponent();
         }
+
+        private void Items_Load(object sender, EventArgs e) {
+            // Making page full screen 
+            this.TopMost = true;
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }
