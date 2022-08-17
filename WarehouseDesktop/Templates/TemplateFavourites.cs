@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -36,7 +37,14 @@ namespace WarehouseDesktop.Templates {
         }
 
         private void ModuleClick(object sender, EventArgs e) {
-            MessageBox.Show("Module " + moduleTitle + " opened!");
+
+            // TODO: Implement this in TemplateModule object 
+            // TODO: Add catched for clicks on modules that dont have forms yet
+
+            // grabbing module name based on clicked module title
+            var module = Activator.CreateInstance(Type.GetType("WarehouseDesktop.Modules." + moduleTitle)) as Form;
+            module.ShowDialog();
+
         }
     }
 }
