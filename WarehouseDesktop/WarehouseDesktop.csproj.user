@@ -19,6 +19,9 @@
     <Compile Update="Signup.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Templates\TemplateDataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Templates\TemplateFavourites.cs">
       <SubType>UserControl</SubType>
     </Compile>

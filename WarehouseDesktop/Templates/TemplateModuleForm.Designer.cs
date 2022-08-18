@@ -24,6 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.templateSearchBox1 = new WarehouseDesktop.Templates.TemplateSearchBox();
+            this.templateDataGridView1 = new WarehouseDesktop.Templates.TemplateDataGridView();
             this.SuspendLayout();
             // 
             // templateSearchBox1
@@ -33,11 +34,19 @@
             this.templateSearchBox1.Size = new System.Drawing.Size(360, 50);
             this.templateSearchBox1.TabIndex = 0;
             // 
+            // templateDataGridView1
+            // 
+            this.templateDataGridView1.Location = new System.Drawing.Point(12, 68);
+            this.templateDataGridView1.Name = "templateDataGridView1";
+            this.templateDataGridView1.Size = new System.Drawing.Size(685, 446);
+            this.templateDataGridView1.TabIndex = 1;
+            // 
             // TemplateModuleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(742, 542);
+            this.Controls.Add(this.templateDataGridView1);
             this.Controls.Add(this.templateSearchBox1);
             this.Name = "TemplateModuleForm";
             this.Text = "TemplateModuleForm";
@@ -49,5 +58,6 @@
         #endregion
 
         private TemplateSearchBox templateSearchBox1;
+        private TemplateDataGridView templateDataGridView1;
     }
 }
