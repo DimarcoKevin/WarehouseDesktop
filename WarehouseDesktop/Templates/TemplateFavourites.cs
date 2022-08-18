@@ -37,13 +37,17 @@ namespace WarehouseDesktop.Templates {
         }
 
         private void ModuleClick(object sender, EventArgs e) {
-
-            // TODO: Implement this in TemplateModule object 
             // TODO: Add catched for clicks on modules that dont have forms yet
 
             // grabbing module name based on clicked module title
-            var module = Activator.CreateInstance(Type.GetType("WarehouseDesktop.Modules." + moduleTitle)) as Form;
-            module.ShowDialog();
+            try {
+                var module = Activator.CreateInstance(Type.GetType("WarehouseDesktop.Modules." + moduleTitle)) as Form;
+                module.ShowDialog();
+            } catch (Exception ex) {
+                MessageBox.Show(ex.ToString());
+                return;
+            }
+            
 
         }
     }
