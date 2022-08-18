@@ -24,7 +24,16 @@
         }
 
         private void ModuleClick(object sender, EventArgs e) {
-            MessageBox.Show("Module " + moduleTitle + " opened!");
+
+            // grabbing module name based on clicked module title
+            try {
+                var module = Activator.CreateInstance(Type.GetType("WarehouseDesktop.Modules." + moduleTitle)) as Form;
+                module.ShowDialog();
+            } catch (Exception ex) {
+                MessageBox.Show(ex.ToString());
+                return;
+            }
+
         }
     }
 }
