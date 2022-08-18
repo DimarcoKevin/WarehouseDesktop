@@ -13,5 +13,9 @@ namespace WarehouseDesktop.Templates {
         public TemplateDataGridView() {
             InitializeComponent();
         }
+
+        private void TemplateDataGridView_Load(object sender, EventArgs e) {
+
+        }
     }
 }

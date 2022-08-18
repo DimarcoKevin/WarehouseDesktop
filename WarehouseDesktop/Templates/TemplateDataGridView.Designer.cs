@@ -33,7 +33,7 @@
             this.DataGridView.Location = new System.Drawing.Point(3, 3);
             this.DataGridView.Name = "DataGridView";
             this.DataGridView.RowTemplate.Height = 25;
-            this.DataGridView.Size = new System.Drawing.Size(679, 442);
+            this.DataGridView.Size = new System.Drawing.Size(692, 461);
             this.DataGridView.TabIndex = 0;
             // 
             // TemplateDataGridView
@@ -42,7 +42,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.DataGridView);
             this.Name = "TemplateDataGridView";
-            this.Size = new System.Drawing.Size(685, 446);
+            this.Size = new System.Drawing.Size(698, 467);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).EndInit();
             this.ResumeLayout(false);
 
