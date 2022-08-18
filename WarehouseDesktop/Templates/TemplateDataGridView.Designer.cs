@@ -30,10 +30,10 @@
             // Data
             // 
             this.Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Data.Location = new System.Drawing.Point(3, 3);
+            this.Data.Location = new System.Drawing.Point(12, 19);
             this.Data.Name = "Data";
             this.Data.RowTemplate.Height = 25;
-            this.Data.Size = new System.Drawing.Size(692, 461);
+            this.Data.Size = new System.Drawing.Size(674, 458);
             this.Data.TabIndex = 0;
             // 
             // TemplateDataGridView
@@ -42,7 +42,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.Data);
             this.Name = "TemplateDataGridView";
-            this.Size = new System.Drawing.Size(698, 467);
+            this.Size = new System.Drawing.Size(700, 500);
             ((System.ComponentModel.ISupportInitialize)(this.Data)).EndInit();
             this.ResumeLayout(false);
 
