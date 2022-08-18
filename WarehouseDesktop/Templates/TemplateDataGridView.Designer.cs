@@ -43,6 +43,7 @@
             this.Controls.Add(this.Data);
             this.Name = "TemplateDataGridView";
             this.Size = new System.Drawing.Size(700, 500);
+            this.Load += new System.EventHandler(this.TemplateDataGridView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Data)).EndInit();
             this.ResumeLayout(false);
 
