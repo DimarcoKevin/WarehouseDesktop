@@ -40,7 +40,7 @@
             this.TemplateDataGridView.Name = "TemplateDataGridView";
             this.TemplateDataGridView.Size = new System.Drawing.Size(685, 446);
             this.TemplateDataGridView.TabIndex = 1;
-            this.TemplateDataGridView.Load += new System.EventHandler(this.templateDataGridView1_Load);
+
             // 
             // TemplateModuleForm
             // 
