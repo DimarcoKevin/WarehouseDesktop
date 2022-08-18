@@ -18,7 +18,7 @@ namespace WarehouseDesktop.Templates {
                 // Making page full screen 
                 this.TopMost = true;
                 this.WindowState = FormWindowState.Maximized;
-            }
+            
         }
     }
 }

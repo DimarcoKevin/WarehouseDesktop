@@ -19,5 +19,8 @@
     <Compile Update="Templates\TemplateModule.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Templates\TemplateModuleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
