@@ -37,7 +37,6 @@ namespace WarehouseDesktop.Templates {
         }
 
         private void ModuleClick(object sender, EventArgs e) {
-            // TODO: Add catched for clicks on modules that dont have forms yet
 
             // grabbing module name based on clicked module title
             try {
