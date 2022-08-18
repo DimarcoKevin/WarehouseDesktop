@@ -23,33 +23,33 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.DataGridView = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).BeginInit();
+            this.Data = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.Data)).BeginInit();
             this.SuspendLayout();
             // 
-            // DataGridView
+            // Data
             // 
-            this.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridView.Location = new System.Drawing.Point(3, 3);
-            this.DataGridView.Name = "DataGridView";
-            this.DataGridView.RowTemplate.Height = 25;
-            this.DataGridView.Size = new System.Drawing.Size(692, 461);
-            this.DataGridView.TabIndex = 0;
+            this.Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Data.Location = new System.Drawing.Point(3, 3);
+            this.Data.Name = "Data";
+            this.Data.RowTemplate.Height = 25;
+            this.Data.Size = new System.Drawing.Size(692, 461);
+            this.Data.TabIndex = 0;
             // 
             // TemplateDataGridView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.DataGridView);
+            this.Controls.Add(this.Data);
             this.Name = "TemplateDataGridView";
             this.Size = new System.Drawing.Size(698, 467);
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Data)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DataGridView DataGridView;
+        private DataGridView Data;
     }
 }
