@@ -40,8 +40,7 @@ namespace WarehouseDesktop.Templates {
             DataTable dt = new DataTable();
 
             // populating datatable and sharing data
-            SqlAdapter.Fill(dt);
-            Data.DataSource = dt;
+            SqlAdapter.Fill(dt);            
 
             // checking for empty table
             if (dt.Rows.Count == 0) {
@@ -49,6 +48,7 @@ namespace WarehouseDesktop.Templates {
                 return;
             }
 
+            Data.DataSource = dt;
             Data.Select();
         }
     }
