@@ -39,7 +39,7 @@ namespace WarehouseDesktop.Templates {
             SqlDataAdapter SqlAdapter = new SqlDataAdapter("select * from dbo." + table , con);
             DataTable dt = new DataTable();
 
-            // populating datatable and sharing data
+            // populating datatable 
             SqlAdapter.Fill(dt);            
 
             // checking for empty table
@@ -48,6 +48,7 @@ namespace WarehouseDesktop.Templates {
                 return;
             }
 
+            // sharing data
             Data.DataSource = dt;
             Data.Select();
         }
