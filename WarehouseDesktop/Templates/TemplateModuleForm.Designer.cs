@@ -23,32 +23,13 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.TemplateSearchBox = new WarehouseDesktop.Templates.TemplateSearchBox();
-            this.TemplateDataGridView = new WarehouseDesktop.Templates.TemplateDataGridView();
             this.SuspendLayout();
-            // 
-            // TemplateSearchBox
-            // 
-            this.TemplateSearchBox.Location = new System.Drawing.Point(12, 12);
-            this.TemplateSearchBox.Name = "TemplateSearchBox";
-            this.TemplateSearchBox.Size = new System.Drawing.Size(360, 50);
-            this.TemplateSearchBox.TabIndex = 0;
-            // 
-            // TemplateDataGridView
-            // 
-            this.TemplateDataGridView.Location = new System.Drawing.Point(12, 68);
-            this.TemplateDataGridView.Name = "TemplateDataGridView";
-            this.TemplateDataGridView.Size = new System.Drawing.Size(685, 446);
-            this.TemplateDataGridView.TabIndex = 1;
-
             // 
             // TemplateModuleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(742, 542);
-            this.Controls.Add(this.TemplateDataGridView);
-            this.Controls.Add(this.TemplateSearchBox);
             this.Name = "TemplateModuleForm";
             this.Text = "TemplateModuleForm";
             this.Load += new System.EventHandler(this.TemplateModuleForm_Load);
@@ -57,8 +38,5 @@
         }
 
         #endregion
-
-        private TemplateSearchBox TemplateSearchBox;
-        private TemplateDataGridView TemplateDataGridView;
     }
 }
