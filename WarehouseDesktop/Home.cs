@@ -90,10 +90,5 @@ namespace WarehouseDesktop {
                 module.Top = (120 * i) + panel + 10;
             }
         }
-
-        private void OpenModule() {
-
-        }
-
     }
 }
