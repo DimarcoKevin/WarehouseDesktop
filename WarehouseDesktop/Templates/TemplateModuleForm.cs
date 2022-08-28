@@ -28,8 +28,8 @@ namespace WarehouseDesktop.Templates {
             // subtracting space for scroll bars
             data.Controls[0].SetBounds(data.Left, data.Top, data.Width - 15, data.Height - 15);
 
-            // adding search box
-            TemplateSearchBox searchBox = new TemplateSearchBox();
+            // adding search box and passing in the datagridview
+            TemplateSearchBox searchBox = new TemplateSearchBox((DataGridView)data.Controls[0]);
             this.Controls.Add(searchBox);
             searchBox.Top = 10;
             searchBox.Left = 10;
