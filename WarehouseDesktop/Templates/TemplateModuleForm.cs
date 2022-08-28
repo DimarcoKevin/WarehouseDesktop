@@ -14,12 +14,6 @@ namespace WarehouseDesktop.Templates {
             this.TopMost = true;
             this.WindowState = FormWindowState.Maximized;
 
-            // adding search box
-            TemplateSearchBox searchBox = new TemplateSearchBox();
-            this.Controls.Add(searchBox);
-            searchBox.Top = 10;
-            searchBox.Left = 10;
-
             // adding data grid
             TemplateDataGridView data = new TemplateDataGridView(this.GetType().Name);
             this.Controls.Add(data);
@@ -33,6 +27,12 @@ namespace WarehouseDesktop.Templates {
             // setting datawdindow bounds to parent object
             // subtracting space for scroll bars
             data.Controls[0].SetBounds(data.Left, data.Top, data.Width - 15, data.Height - 15);
+
+            // adding search box
+            TemplateSearchBox searchBox = new TemplateSearchBox();
+            this.Controls.Add(searchBox);
+            searchBox.Top = 10;
+            searchBox.Left = 10;
 
         }
     }
