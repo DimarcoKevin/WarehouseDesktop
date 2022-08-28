@@ -34,6 +34,11 @@ namespace WarehouseDesktop.Templates {
             searchBox.Top = 10;
             searchBox.Left = 10;
 
+            try {
+                searchBox.getColumnNames(); // testing
+            } catch (Exception ex) {
+                MessageBox.Show(ex.Message);    
+            }
         }
     }
 }
