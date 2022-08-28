@@ -10,8 +10,18 @@ using System.Windows.Forms;
 
 namespace WarehouseDesktop.Templates {
     public partial class TemplateSearchBox : UserControl {
+
+        DataGridView dataGrid;
+
         public TemplateSearchBox() {
             InitializeComponent();
+            dataGrid = new DataGridView();  
         }
+
+        public TemplateSearchBox(DataGridView data) {
+            InitializeComponent();
+            dataGrid = data;
+        }
+
     }
 }
