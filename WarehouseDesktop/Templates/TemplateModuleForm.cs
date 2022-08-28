@@ -35,7 +35,7 @@ namespace WarehouseDesktop.Templates {
             searchBox.Left = 10;
 
             try { // TODO: check if this is needed inside try/catch
-                searchBox.getColumnNames(); // testing
+               string[] columns = searchBox.getColumnNames(); // testing
             } catch (Exception ex) {
                 MessageBox.Show(ex.Message);    
             }
