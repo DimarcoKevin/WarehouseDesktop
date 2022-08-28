@@ -30,7 +30,7 @@
             // Data
             // 
             this.Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Data.Location = new System.Drawing.Point(12, 19);
+            this.Data.Location = new System.Drawing.Point(0, 0);
             this.Data.Name = "Data";
             this.Data.RowTemplate.Height = 25;
             this.Data.Size = new System.Drawing.Size(674, 458);
