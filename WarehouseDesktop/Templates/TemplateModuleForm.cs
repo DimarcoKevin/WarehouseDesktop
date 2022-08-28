@@ -23,8 +23,17 @@ namespace WarehouseDesktop.Templates {
             // adding data grid
             TemplateDataGridView data = new TemplateDataGridView(this.GetType().Name);
             this.Controls.Add(data);
-            data.Top = 80;
-            data.Left = 10;
+            
+            // setting object bounds
+            data.Left = 0;
+            data.Top = 40;
+            data.Width = this.Width;
+            data.Height = this.Height;  
+
+            // setting datawdindow bounds to parent object
+            // subtracting space for scroll bars
+            data.Controls[0].SetBounds(data.Left, data.Top, data.Width - 15, data.Height - 15);
+
         }
     }
 }
