@@ -26,15 +26,15 @@ namespace WarehouseDesktop.Templates {
 
             // setting datawdindow bounds to parent object
             // subtracting space for scroll bars
-            data.Controls[0].SetBounds(data.Left, data.Top, data.Width - 15, data.Height - 15);
+            data.Controls[0].SetBounds(data.Left, data.Top, data.Width - 15, data.Height - 15); // TODO: fix use of hacky controls
 
             // adding search box and passing in the datagridview
-            TemplateSearchBox searchBox = new TemplateSearchBox((DataGridView)data.Controls[0]);
+            TemplateSearchBox searchBox = new TemplateSearchBox((DataGridView)data.Controls[0]); // TODO: fix this hacky casting solution
             this.Controls.Add(searchBox);
             searchBox.Top = 10;
             searchBox.Left = 10;
 
-            try {
+            try { // TODO: check if this is needed inside try/catch
                 searchBox.getColumnNames(); // testing
             } catch (Exception ex) {
                 MessageBox.Show(ex.Message);    
