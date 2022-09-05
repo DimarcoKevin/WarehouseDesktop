@@ -44,6 +44,7 @@
             // 
             this.pb.BackgroundImage = global::WarehouseDesktop.Properties.Resources.Add_item_icon_medium;
             this.pb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb.Location = new System.Drawing.Point(3, 3);
             this.pb.Name = "pb";
             this.pb.Size = new System.Drawing.Size(82, 73);
@@ -53,6 +54,7 @@
             // 
             // l_title
             // 
+            this.l_title.Cursor = System.Windows.Forms.Cursors.Hand;
             this.l_title.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.l_title.Location = new System.Drawing.Point(91, 3);
             this.l_title.Name = "l_title";
