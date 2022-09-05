@@ -44,6 +44,7 @@
             // 
             this.pb.BackgroundImage = global::WarehouseDesktop.Properties.Resources.Add_item_icon_large;
             this.pb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb.Location = new System.Drawing.Point(3, 3);
             this.pb.Name = "pb";
             this.pb.Size = new System.Drawing.Size(127, 130);
@@ -53,6 +54,7 @@
             // 
             // l_title
             // 
+            this.l_title.Cursor = System.Windows.Forms.Cursors.Hand;
             this.l_title.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.l_title.Location = new System.Drawing.Point(3, 132);
             this.l_title.Name = "l_title";
@@ -69,6 +71,7 @@
             this.Controls.Add(this.Module);
             this.Name = "TemplateModule";
             this.Size = new System.Drawing.Size(163, 230);
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.ModuleDragDrop);
             this.Module.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb)).EndInit();
             this.ResumeLayout(false);

@@ -35,5 +35,21 @@
             }
 
         }
+
+        private void ModuleDragDrop(object sender, DragEventArgs e) {
+
+            // setting cursor to cross
+            Cursor = Cursors.Cross;
+
+            // checking if the drop is in the favourite section or main section
+            Boolean favourite = (e.X < 270);
+
+            MessageBox.Show("Favourite :" + favourite);
+
+            // resetting cursor to default
+            Cursor = Cursors.Default;
+
+        }
+
     }
 }
