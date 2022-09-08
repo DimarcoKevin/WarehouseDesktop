@@ -51,7 +51,7 @@
             this.pb.TabIndex = 1;
             this.pb.TabStop = false;
             this.pb.DoubleClick += new System.EventHandler(this.ModuleClick);
-            this.pb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ModuleDragDrop);
+            this.pb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ModuleDrag);
             // 
             // l_title
             // 
@@ -64,7 +64,7 @@
             this.l_title.Text = "TEMP";
             this.l_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.l_title.DoubleClick += new System.EventHandler(this.ModuleClick);
-            this.l_title.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ModuleDragDrop);
+            this.l_title.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ModuleDrag);
             // 
             // TemplateModule
             // 

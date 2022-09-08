@@ -36,7 +36,7 @@
 
         }
 
-        private void ModuleDragDrop(object sender, MouseEventArgs e) {
+        private void ModuleDrag(object sender, MouseEventArgs e) {
             // setting cursor to cross
             Cursor = Cursors.Cross;
 
