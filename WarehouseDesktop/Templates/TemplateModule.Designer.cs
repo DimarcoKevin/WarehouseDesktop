@@ -50,6 +50,7 @@
             this.pb.Size = new System.Drawing.Size(127, 130);
             this.pb.TabIndex = 1;
             this.pb.TabStop = false;
+            this.pb.DragDrop += new System.Windows.Forms.DragEventHandler(this.ModuleDrop);
             this.pb.DoubleClick += new System.EventHandler(this.ModuleClick);
             this.pb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ModuleDrag);
             // 
@@ -63,6 +64,7 @@
             this.l_title.TabIndex = 0;
             this.l_title.Text = "TEMP";
             this.l_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.l_title.DragDrop += new System.Windows.Forms.DragEventHandler(this.ModuleDrop);
             this.l_title.DoubleClick += new System.EventHandler(this.ModuleClick);
             this.l_title.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ModuleDrag);
             // 

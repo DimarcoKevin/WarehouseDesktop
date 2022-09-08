@@ -40,9 +40,13 @@
             // setting cursor to cross
             Cursor = Cursors.Cross;
 
+        }
+
+        private void ModuleDrop(object sender, DragEventArgs e) {
+
+
             // checking if the drop is in the favourite section or main section
             Boolean favourite = (e.X < 270);
-
 
 
             // resetting cursor to default
