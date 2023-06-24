@@ -42,12 +42,13 @@ namespace WarehouseDesktop.Templates {
 
             for (int i = 0; i < columns.Length; i++) {
                 if (format.Length > 0) format += " OR ";
-                format += string.Format("[{0}] = '{1}'", columns[i], SearchBox.Text);
+                format += string.Format("{0} = '{1}'", columns[i], SearchBox.Text);
             }
 
-            MessageBox.Show(format);
+             MessageBox.Show(format);
 
-            (dataGrid.DataSource as DataTable).DefaultView.RowFilter = format;
+            // TODO: this line current freezes everything and you need to end task... 
+            //(dataGrid.DataSource as DataTable).DefaultView.RowFilter = format;
         }
 
         
