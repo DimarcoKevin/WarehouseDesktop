@@ -20,7 +20,7 @@ namespace WarehouseDesktop.Templates {
             
             // setting object bounds
             data.Left = 0;
-            data.Top = 40;
+            data.Top = 60;
             data.Width = this.Width;
             data.Height = this.Height;  
 
