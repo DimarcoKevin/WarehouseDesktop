@@ -26,9 +26,6 @@ namespace WarehouseDesktop {
 
             SqlAdapter.Fill(dt);
 
-            GlobalVariables.user = dt.Rows[0]["username"].ToString();
-            GlobalVariables.role = dt.Rows[0]["role"].ToString();
-
             // checking if any rows are found
             if (dt.Rows.Count == 0) {
                 l_error.Text = "Error, cannot sign you in...";
@@ -36,6 +33,10 @@ namespace WarehouseDesktop {
                 t_password.Text = "";
                 return;
             }
+
+            // setting global vars
+            GlobalVariables.user = dt.Rows[0]["username"].ToString();
+            GlobalVariables.role = dt.Rows[0]["role"].ToString();
 
             // showing home page
             Home home = new Home();
