@@ -91,7 +91,9 @@ namespace WarehouseDesktop.Templates {
             //dataGrid.Sort(dataGrid.Columns[2], ListSortDirection.Ascending);
         }
 
-        
-
+        // checking for enter key to run search function
+        private void SearchBox_KeyDown(object sender, KeyEventArgs e) {
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Return) search(sender, e);
+        }
     }
 }
