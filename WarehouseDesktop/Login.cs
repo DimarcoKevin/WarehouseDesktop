@@ -31,6 +31,7 @@ namespace WarehouseDesktop {
                 l_error.Text = "Error, cannot sign you in...";
                 t_username.Text = "";
                 t_password.Text = "";
+                t_username.Focus();
                 return;
             }
 
