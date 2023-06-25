@@ -45,7 +45,6 @@ namespace WarehouseDesktop.Templates {
             }
 
             return types;
-
         }
 
 
@@ -57,44 +56,36 @@ namespace WarehouseDesktop.Templates {
             string searchText = SearchBox.Text;
             Boolean isString = false;
 
-            
+            // validation for letters
+            for (int i = 0; i < searchText.Length; i++) {
+                if (Char.IsLetter(searchText[i])) isString = true;
+            }
 
+            // TODO: could later account for date fields
+            // looping over columns to see their types
             for (int i = 0; i < columns.Length; i++) {
-
-               
-
+            
                 // different column types
-                // TODO: could later account for date fields
                 if (types[i].ToString().Contains("String")) {
 
                     if (format.Length > 0) format += " OR ";
                     format += string.Format("[{0}] like '%{1}%'", columns[i], searchText);
 
-                } else if (types[i].ToString().Contains("Decimal")) {
- 
-                    // validation for letters
-                    for (int j = 0; j < searchText.Length; j++) { 
-
-                        MessageBox.Show(searchText.Substring(j,1));
-                    }
-                    
+                } else if (types[i].ToString().Contains("Decimal") && !isString) {
+                     
                     if (format.Length > 0) format += " OR ";
                     format += string.Format("[{0}] = {1}", columns[i], searchText);
                 } 
             }
 
-            MessageBox.Show(format);
+            // resetting format string if nothing searched
+            if (searchText.Length == 0) format = "";
  
-
-
-            //This works for a single row!
+            // binding the new search query to datagrid
             BindingSource bs = new BindingSource();
             bs.DataSource = dataGrid.DataSource;
-            //bs.Filter = format;
-            bs.Filter = "[" + columns[3] + "] Like '%" + SearchBox.Text + "%' OR [" + columns[2] + "] Like '%" + SearchBox.Text + "%'";
-            //dataGrid.DataSource = bs;
-
-            //MessageBox.Show(bs.Filter);
+            bs.Filter = format;
+            dataGrid.DataSource = bs;
 
             //this works for sorting by column specifics
             //dataGrid.Sort(dataGrid.Columns[2], ListSortDirection.Ascending);
