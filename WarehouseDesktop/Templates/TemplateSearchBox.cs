@@ -35,12 +35,27 @@ namespace WarehouseDesktop.Templates {
             return columns;
         }
 
+        // this function will grab the type of all columns
+        public Type[] getColumnTypes() {
+            int count = dataGrid.Columns.Count;
+            Type[] types = new Type[count];
+
+            for (int i = 0; i < count; i++) {
+                types[i] = dataGrid.Columns[i].GetType();
+            }
+
+            return types;
+
+        }
+
+
         // dynamically search through datagrid where any row matches text
         private void search(object sender, EventArgs e) {
+            Type[] types = getColumnTypes();
             string[] columns = getColumnNames();
             string format = "";
 
-            for (int i = 0; i < columns.Length; i++) {
+            for (int i = 0; i < 3; i++) { //columns.Length; i++) {
                 if (format.Length > 0) format += " OR ";
                 format += string.Format("[{0}] = '{1}'", columns[i], SearchBox.Text);
             }
@@ -50,14 +65,15 @@ namespace WarehouseDesktop.Templates {
             //This works for a single row!
             BindingSource bs = new BindingSource();
             bs.DataSource = dataGrid.DataSource;
-            bs.Filter = "[" + columns[2] + "] Like '%" + SearchBox.Text + "%'";
+            //bs.Filter = format;
+            bs.Filter = "[" + columns[1] + "] Like '%" + SearchBox.Text + "%' OR [" + columns[2] + "] Like '%" + SearchBox.Text + "%'";
+            //bs.Filter = "[" + columns[2] + "] Like '%" + SearchBox.Text + "%'";
             dataGrid.DataSource = bs;
+
+            MessageBox.Show(bs.Filter);
 
             //this works for sorting by column specifics
             //dataGrid.Sort(dataGrid.Columns[2], ListSortDirection.Ascending);
-
-            // TODO: this line current freezes everything and you need to end task... 
-            //(dataGrid.DataSource as DataTable).DefaultView.RowFilter = format;
         }
 
         
