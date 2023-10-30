@@ -8,7 +8,8 @@ namespace WarehouseDesktop.Templates {
         public TemplateModuleForm() {
             // Bug fix! 
             // The templates don't need to init here since each child will init
-            //InitializeComponent();
+            // but the build breaks if you remove it...
+            InitializeComponent();
         }
 
         private void TemplateModuleForm_Load(object sender, EventArgs e) {
