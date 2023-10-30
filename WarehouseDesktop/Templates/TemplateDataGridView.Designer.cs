@@ -23,30 +23,30 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.Data = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.Data)).BeginInit();
-            this.SuspendLayout();
+            Data = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)Data).BeginInit();
+            SuspendLayout();
             // 
             // Data
             // 
-            this.Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Data.Location = new System.Drawing.Point(0, 0);
-            this.Data.Name = "Data";
-            this.Data.RowTemplate.Height = 25;
-            this.Data.Size = new System.Drawing.Size(674, 458);
-            this.Data.TabIndex = 0;
+            Data.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            Data.Location = new Point(0, 0);
+            Data.Name = "Data";
+            Data.RowTemplate.Height = 25;
+            Data.Size = new Size(674, 458);
+            Data.TabIndex = 0;
+            Data.CellValueChanged += updateStampValues;
             // 
             // TemplateDataGridView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.Data);
-            this.Name = "TemplateDataGridView";
-            this.Size = new System.Drawing.Size(700, 500);
-            this.Load += new System.EventHandler(this.TemplateDataGridView_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Data)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(Data);
+            Name = "TemplateDataGridView";
+            Size = new Size(700, 500);
+            Load += TemplateDataGridView_Load;
+            ((System.ComponentModel.ISupportInitialize)Data).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
