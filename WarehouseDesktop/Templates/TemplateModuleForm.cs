@@ -6,7 +6,9 @@ namespace WarehouseDesktop.Templates {
     public partial class TemplateModuleForm : Form {
         SqlConnection con = new SqlConnection(GlobalVariables.connectionString);
         public TemplateModuleForm() {
-            InitializeComponent();
+            // Bug fix! 
+            // The templates don't need to init here since each child will init
+            //InitializeComponent();
         }
 
         private void TemplateModuleForm_Load(object sender, EventArgs e) {
