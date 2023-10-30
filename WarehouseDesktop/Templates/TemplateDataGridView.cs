@@ -71,5 +71,12 @@ namespace WarehouseDesktop.Templates {
             this.Data.Rows[e.RowIndex].Cells["user_stamp"].Value = GlobalVariables.user;
             this.Data.Rows[e.RowIndex].Cells["time_stamp"].Value = DateTime.Now;
         }
+
+        // testing update of this datagridview
+        private void update() {
+            con.Open();
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            adapter.Update((DataTable)Data.DataSource);
+        }
     }
 }
