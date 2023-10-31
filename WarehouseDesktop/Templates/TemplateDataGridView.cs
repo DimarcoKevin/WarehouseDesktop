@@ -70,7 +70,7 @@ namespace WarehouseDesktop.Templates {
             if (columnName.Equals("user_stamp") || columnName.Equals("time_stamp")) { return; }
 
             // updating time_stamp and user_stamp
-            if (this.Data.Columns.Contains("user_stamp") || this.Data.Columns.Contains("time_stamp")) {
+            if (this.Data.Columns.Contains("user_stamp") && this.Data.Columns.Contains("time_stamp")) {
                 this.Data.Rows[e.RowIndex].Cells["user_stamp"].Value = GlobalVariables.user;
                 this.Data.Rows[e.RowIndex].Cells["time_stamp"].Value = DateTime.Now;
             }
@@ -83,6 +83,9 @@ namespace WarehouseDesktop.Templates {
         private void update(object sender, DataGridViewCellEventArgs e) {
             con.Open();
             DataGridView dgv = (DataGridView) sender;
+
+
+            con.Close();
 
         }
     }
