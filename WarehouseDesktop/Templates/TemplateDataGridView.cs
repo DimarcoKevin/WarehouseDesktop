@@ -59,8 +59,6 @@ namespace WarehouseDesktop.Templates {
         // this is basically an itemchanged event to update user/time stamps
         private void updateStampValues(object sender, DataGridViewCellEventArgs e) {
 
-            // this will be used later when adding save functionality
-            saveNeeded = true;
 
             // getting name of column being updated
             DataGridView dgv = (DataGridView)sender;
@@ -68,6 +66,17 @@ namespace WarehouseDesktop.Templates {
 
             // validation to prevent infinte loops
             if (columnName.Equals("user_stamp") || columnName.Equals("time_stamp")) { return; }
+
+            // this will prevent updating of IDs
+            if (columnName.Equals("id")) {
+                var underlyingDataRow = ((DataRowView)this.Data.Rows[e.RowIndex].DataBoundItem).Row;
+                underlyingDataRow.RejectChanges();
+                MessageBox.Show("Cannot manually update IDs");
+                return;
+            }
+
+            // this will be used later when adding save functionality
+            saveNeeded = true;
 
             // updating time_stamp and user_stamp
             if (this.Data.Columns.Contains("user_stamp") && this.Data.Columns.Contains("time_stamp")) {
@@ -82,11 +91,14 @@ namespace WarehouseDesktop.Templates {
         // testing update of this datagridview
         private void update(object sender, DataGridViewCellEventArgs e) {
             con.Open();
-            DataGridView dgv = (DataGridView) sender;
 
+            try {
 
-            con.Close();
-
+            } catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            } finally {
+                con.Close();
+            }
         }
     }
 }
