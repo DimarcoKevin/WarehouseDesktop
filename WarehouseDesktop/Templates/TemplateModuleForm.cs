@@ -16,6 +16,7 @@ namespace WarehouseDesktop.Templates {
             // Making page full screen 
             this.TopMost = true;
             this.WindowState = FormWindowState.Maximized;
+            this.MaximizeBox = false;
 
             // adding data grid
             TemplateDataGridView data = new TemplateDataGridView(this.GetType().Name);
@@ -24,12 +25,12 @@ namespace WarehouseDesktop.Templates {
             // setting object bounds
             data.Left = 0;
             data.Top = 60;
-            data.Width = this.Width;
-            data.Height = this.Height;  
+            data.Width = this.Width + 40;
+            data.Height = this.Height - 100;
 
             // setting datawdindow bounds to parent object
             // subtracting space for scroll bars
-            data.Controls[0].SetBounds(data.Left, data.Top, data.Width - 15, data.Height - 15); // TODO: fix use of hacky controls
+            data.Controls[0].SetBounds(data.Left, data.Top, data.Width - 60, data.Height - 60); // TODO: fix use of hacky controls
 
             // adding search box and passing in the datagridview
             TemplateSearchBox searchBox = new TemplateSearchBox((DataGridView)data.Controls[0]); // TODO: fix this hacky casting solution
