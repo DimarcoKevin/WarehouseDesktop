@@ -28,7 +28,7 @@ namespace WarehouseDesktop.Templates {
             data.Width = this.Width + 40;
             data.Height = this.Height - 100;
 
-            // setting datawdindow bounds to parent object
+            // setting datawindow bounds to parent object
             // subtracting space for scroll bars
             data.Controls[0].SetBounds(data.Left, data.Top, data.Width - 60, data.Height - 60); // TODO: fix use of hacky controls
 
