@@ -14,6 +14,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 namespace WarehouseDesktop.Templates {
     public partial class TemplateDataGridView : UserControl {
         SqlConnection con = new SqlConnection(GlobalVariables.connectionString);
+        DataTable originalDT = new DataTable();
 
         string table;
         bool saveNeeded = false;
@@ -40,8 +41,9 @@ namespace WarehouseDesktop.Templates {
             SqlDataAdapter SqlAdapter = new SqlDataAdapter("select * from dbo." + table, con);
             DataTable dt = new DataTable();
 
-            // populating datatable 
+            // populating datatable and original datatable
             SqlAdapter.Fill(dt);
+            SqlAdapter.Fill(originalDT);
 
             // checking for empty table
             if (dt.Rows.Count == 0) {
@@ -68,15 +70,20 @@ namespace WarehouseDesktop.Templates {
             if (columnName.Equals("user_stamp") || columnName.Equals("time_stamp")) { return; }
 
             // updating time_stamp and user_stamp
-            this.Data.Rows[e.RowIndex].Cells["user_stamp"].Value = GlobalVariables.user;
-            this.Data.Rows[e.RowIndex].Cells["time_stamp"].Value = DateTime.Now;
+            if (this.Data.Columns.Contains("user_stamp") || this.Data.Columns.Contains("time_stamp")) {
+                this.Data.Rows[e.RowIndex].Cells["user_stamp"].Value = GlobalVariables.user;
+                this.Data.Rows[e.RowIndex].Cells["time_stamp"].Value = DateTime.Now;
+            }
         }
 
+        // TODO: this is currently called on column double click
+        // TODO: will have to implement a way to save in module
+        // TODO: look into adding menus too
         // testing update of this datagridview
-        private void update() {
+        private void update(object sender, DataGridViewCellEventArgs e) {
             con.Open();
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            adapter.Update((DataTable)Data.DataSource);
+            DataGridView dgv = (DataGridView) sender;
+
         }
     }
 }

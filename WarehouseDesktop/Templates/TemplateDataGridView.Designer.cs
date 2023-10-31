@@ -29,12 +29,14 @@
             // 
             // Data
             // 
+            Data.AllowUserToOrderColumns = true;
             Data.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             Data.Location = new Point(0, 0);
             Data.Name = "Data";
             Data.RowTemplate.Height = 25;
             Data.Size = new Size(674, 458);
             Data.TabIndex = 0;
+            Data.CellDoubleClick += update;
             Data.CellValueChanged += updateStampValues;
             // 
             // TemplateDataGridView
